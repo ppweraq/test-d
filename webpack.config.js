@@ -23,7 +23,7 @@ module.exports = ({ develop }) => ({
             template: './src/index.html'
         }),
         new MiniCssExtractPlugin({
-            filename: './styles/style.css'
+            filename: './styles/style.css' // Извлечение в отдельный CSS файл
         })
     ],
     module: {
@@ -39,13 +39,16 @@ module.exports = ({ develop }) => ({
             {
                 test: /\.css$/i,
                 use: [
-                    MiniCssExtractPlugin.loader, 'css-loader'
+                    MiniCssExtractPlugin.loader,
+                    'css-loader' // Добавление css-loader для обработки CSS
                 ]
             },
             {
                 test: /\.scss$/i,
                 use: [
-                    MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'
+                    MiniCssExtractPlugin.loader,
+                    'css-loader',
+                    'sass-loader' // Добавление sass-loader для обработки SCSS
                 ]
             },
             {
@@ -54,7 +57,7 @@ module.exports = ({ develop }) => ({
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['@babel/preset-env'] // Поддержка современных JS-функций
+                        presets: ['@babel/preset-env']
                     }
                 }
             },

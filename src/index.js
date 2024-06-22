@@ -1,3 +1,5 @@
+import './styles/style.css'
+
 
     document.addEventListener('DOMContentLoaded', function() {
         const searchInput = document.getElementById('search-input');
