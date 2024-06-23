@@ -17,6 +17,9 @@
   <body>
     <header>
       <div class="header_container">
+        <div class="main-container">
+
+        
         <nav class="header_nav">
           <div class="header_nav_logotip">
             <div class="header_nav_logo">
@@ -55,6 +58,7 @@
           </div>
         </nav>
       </div>
+      </div>
     </header>
     <div class="container">
       <div class="main-container">
@@ -88,7 +92,7 @@
             </div>
             <span></span>
             <div class="price-input-item">
-              <input type="text" placeholder="до" id="price-input" />
+              <input type="text" placeholder="от" id="price-input" />
             </div>
           </div>
         </section>
@@ -96,27 +100,32 @@
         <section id="brand">
           <div class="brand-top">
             <div class="brand-title">Бренд</div>
-            <button>Очистить</button>
+            <button id="clear-attributes-btn">Очистить</button>
           </div>
           <div class="brand-search">
             <img class="loupe-icon" src="./img/loupe.svg" alt="loupe" />
-            <input type="text" placeholder="Поиск" id="search-input" />
+            <input type="text" placeholder="Поиск" id="search-input-brand" />
             <div class="brand-buttons">
-              <button type="button" class="clear-btn" id="clear-btn">
+              <button type="button" class="clear-btn" id="clear-btn-brand">
                 <img src="img/close.svg" alt="close" />
               </button>
-              <button type="button" class="search-btn" id="search-btn">
+              <!-- <button type="button" class="search-btn" id="search-btn-brand">
                 Найти
-              </button>
+              </button> -->
             </div>
+          </div>  
+          <!-- <div id="search-results-brand"></div> -->
+          <div class="result-message" id="result-message-brand" style="display: none;">
+            По вашему запросу ничего не найдено
           </div>
+          
           <div class="brand-attribute">
             <div class="brand-attribute-item">
               <input
                 type="checkbox"
                 id="attribute-checkbox-1"
                 class="checkbox-input"
-                checked
+                
               />
               <label for="attribute-checkbox-1" class="attribute-checkbox">
                 <div class="attribute-checkbox-left">

@@ -134,24 +134,20 @@ legend {
   --color-white: rgba(255, 255, 255, 1);
 }
 .container {
-
-  .main-container{
-     padding: 24px 0 36px;
-    margin: 0 auto ;
-     display: flex;
-     justify-content: center;
-  gap: 36px;
+  .main-container {
+    padding: 24px 0 36px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 36px;
   }
-
 
   margin: 0 auto;
   width: calc(100% - 6.94vw);
- 
 
   // height: 100vh
 }
 header {
-  // width: 100%;
   .header_container {
     margin: 0 100px;
     @media (max-width: 1440px) {
@@ -159,26 +155,29 @@ header {
     }
     .header_nav {
       display: flex;
-      //   justify-content: space-between;
       gap: 24px;
       align-items: center;
+      justify-content: center;
       padding: 12px 0;
+      margin: 0 auto;
     }
 
     .header_nav_logotip {
       display: flex;
-      gap: 10px;
+      gap: 8px;
       align-items: center;
       .header_nav_logo {
-        padding: 14.5px 24px;
+        // padding: 14.5px 24px;
+        margin: 14.5px 24px;
         display: flex;
         gap: 8px;
+        justify-content: center;
         align-items: center;
-
+        width: 100%;
         font-family: "Inter";
         font-size: 16px;
         font-weight: 400;
-        // line-height: 19.36px;
+        line-height: 19.36px;
         // text-align: center;
       }
     }
@@ -190,6 +189,10 @@ header {
       font-family: "Inter";
       font-weight: 500;
       font-size: 14px;
+      &:hover {
+        background: var(--color-brand);
+        color: var(--color-font-bg);
+      }
     }
     .header_nav_input {
       position: relative;
@@ -198,12 +201,10 @@ header {
       max-width: 1015px;
 
       width: 100%;
-      //   border: none;
-      //   border: 1px solid var(--color-brand);
+
       input {
-        // max-width: 1015px;
         width: 100%;
-        padding-left: 48px; 
+        padding-left: 48px;
         padding-right: 16px;
         height: 48px;
         border: 1px solid var(--color-brand);
@@ -211,8 +212,8 @@ header {
       }
       .loupe-icon {
         position: absolute;
-        left: 18px; 
-        width: 24px; 
+        left: 18px;
+        width: 24px;
         height: 24px;
       }
       .input_buttons {
@@ -339,9 +340,7 @@ aside {
           width: 100%;
           // padding-left: 26px;
           box-sizing: border-box;
-         
-
-        } 
+        }
         #price-input::placeholder {
           text-indent: 0;
           padding-left: 0;
@@ -351,8 +350,8 @@ aside {
           line-height: 14px;
           text-align: left;
 
-          color: var(--color-font-second); 
-          opacity: 1; 
+          color: var(--color-font-second);
+          opacity: 1;
         }
       }
     }
@@ -380,6 +379,9 @@ aside {
           text-align: right;
           color: var(--color-font-second);
           text-decoration-line: underline;
+          &:hover {
+            color: rgba(51, 51, 51, 1);
+          }
         }
       }
       .brand-search {
@@ -391,15 +393,25 @@ aside {
         //   border: 1px solid var(--color-brand);
         input {
           width: 100%;
-          padding-left: 36px; 
+          padding-left: 36px;
           height: 36px;
           border: 1px solid var(--color-border);
           border-radius: 4px;
+          &::placeholder {
+            font-family: "PT Sans";
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16px;
+            color: var(--color-font-second);
+          }
+          &:focus {
+            border: 1px solid var(--color-brand);
+          }
         }
         .loupe-icon {
           position: absolute;
-          left: 13px; 
-          width: 16px; 
+          left: 13px;
+          width: 16px;
           height: 16px;
         }
         .brand-buttons {
@@ -410,30 +422,39 @@ aside {
             background: var(--color-font-bg);
           }
 
-          .clear-btn,
-          .search-btn {
+          .clear-btn {
             display: none;
             position: absolute;
           }
           .clear-btn {
-            right: 79px;
-            top: 12px;
+            right: 16px;
+            bottom: 6px;
           }
-          .search-btn {
-            right: 4px;
-            top: 4px;
-            height: 38px;
-            width: 70px;
+          // .search-btn {
+          //   right: 4px;
+          //   top: 4px;
+          //   height: 38px;
+          //   width: 70px;
 
-            color: var(--color-white);
-            background: rgba(115, 175, 244, 1);
-            border-radius: 8px;
-            font-size: 14px;
-            font-weight: 700;
-            line-height: 14px;
-          }
+          //   color: var(--color-white);
+          //   background: rgba(115, 175, 244, 1);
+          //   border-radius: 8px;
+          //   font-size: 14px;
+          //   font-weight: 700;
+          //   line-height: 14px;
+          // }
         }
       }
+      .result-message {
+        font-family: "PT Sans";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16px;
+        color: rgba(51, 51, 51, 1);
+
+        margin-top: -8px;
+      }
+
       .brand-attribute {
         display: flex;
         flex-direction: column;
@@ -608,6 +629,9 @@ main {
       text-align: left;
       font-family: "PT Sans";
       max-width: 333px;
+      @media (max-width: 1440px) {
+        max-width: 213px;
+      }
       .content-grid-item--img {
         @media (max-width: 1440px) {
           .default-img {
@@ -683,6 +707,10 @@ main {
           width: 100%;
           color: var(--color-font-second);
           border: 1px solid var(--color-font-second);
+          &:hover {
+            background: var(--color-font-second);
+            color: var(--color-white);
+          }
         }
       }
       &:hover {

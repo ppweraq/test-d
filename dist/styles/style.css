@@ -153,21 +153,26 @@ header .header_container .header_nav {
   display: flex;
   gap: 24px;
   align-items: center;
+  justify-content: center;
   padding: 12px 0;
+  margin: 0 auto;
 }
 header .header_container .header_nav_logotip {
   display: flex;
-  gap: 10px;
+  gap: 8px;
   align-items: center;
 }
 header .header_container .header_nav_logotip .header_nav_logo {
-  padding: 14.5px 24px;
+  margin: 14.5px 24px;
   display: flex;
   gap: 8px;
+  justify-content: center;
   align-items: center;
+  width: 100%;
   font-family: "Inter";
   font-size: 16px;
   font-weight: 400;
+  line-height: 19.36px;
 }
 header .header_container .header_nav_btn a {
   padding: 15px 24px;
@@ -177,6 +182,10 @@ header .header_container .header_nav_btn a {
   font-family: "Inter";
   font-weight: 500;
   font-size: 14px;
+}
+header .header_container .header_nav_btn a:hover {
+  background: var(--color-brand);
+  color: var(--color-font-bg);
 }
 header .header_container .header_nav_input {
   position: relative;
@@ -353,6 +362,9 @@ aside section#brand .brand-top button {
   color: var(--color-font-second);
   text-decoration-line: underline;
 }
+aside section#brand .brand-top button:hover {
+  color: rgb(51, 51, 51);
+}
 aside section#brand .brand-search {
   position: relative;
   display: flex;
@@ -365,6 +377,23 @@ aside section#brand .brand-search input {
   height: 36px;
   border: 1px solid var(--color-border);
   border-radius: 4px;
+}
+aside section#brand .brand-search input::-moz-placeholder {
+  font-family: "PT Sans";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  color: var(--color-font-second);
+}
+aside section#brand .brand-search input::placeholder {
+  font-family: "PT Sans";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  color: var(--color-font-second);
+}
+aside section#brand .brand-search input:focus {
+  border: 1px solid var(--color-brand);
 }
 aside section#brand .brand-search .loupe-icon {
   position: absolute;
@@ -379,26 +408,21 @@ aside section#brand .brand-search .brand-buttons {
 aside section#brand .brand-search .brand-buttons .search-btn:hover {
   background: var(--color-font-bg);
 }
-aside section#brand .brand-search .brand-buttons .clear-btn,
-aside section#brand .brand-search .brand-buttons .search-btn {
+aside section#brand .brand-search .brand-buttons .clear-btn {
   display: none;
   position: absolute;
 }
 aside section#brand .brand-search .brand-buttons .clear-btn {
-  right: 79px;
-  top: 12px;
+  right: 16px;
+  bottom: 6px;
 }
-aside section#brand .brand-search .brand-buttons .search-btn {
-  right: 4px;
-  top: 4px;
-  height: 38px;
-  width: 70px;
-  color: var(--color-white);
-  background: rgb(115, 175, 244);
-  border-radius: 8px;
+aside section#brand .result-message {
+  font-family: "PT Sans";
   font-size: 14px;
-  font-weight: 700;
-  line-height: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  color: rgb(51, 51, 51);
+  margin-top: -8px;
 }
 aside section#brand .brand-attribute {
   display: flex;
@@ -556,6 +580,11 @@ main .content-grid .content-grid-item {
   max-width: 333px;
 }
 @media (max-width: 1440px) {
+  main .content-grid .content-grid-item {
+    max-width: 213px;
+  }
+}
+@media (max-width: 1440px) {
   main .content-grid .content-grid-item .content-grid-item--img .default-img {
     display: none;
   }
@@ -625,6 +654,10 @@ main .content-grid .content-grid-item .content-grid-item-button .none {
   width: 100%;
   color: var(--color-font-second);
   border: 1px solid var(--color-font-second);
+}
+main .content-grid .content-grid-item .content-grid-item-button .none:hover {
+  background: var(--color-font-second);
+  color: var(--color-white);
 }
 main .content-grid .content-grid-item:hover .title-name {
   color: var(--color-font-hover);
